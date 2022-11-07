@@ -96,7 +96,6 @@ img {
   line-height: 1.19;
   padding-top: 25px;
   padding-bottom: 25px;
-  display: flex;
 }
 
 .logo-web {
@@ -104,12 +103,17 @@ img {
 }
 
 /* Навігація сайту */
+.header .container {
+  align-items: center;
+}
+
 .sitenav {
   color: var(--main-text-color);
   font-weight: 500;
   font-size: 14px;
   display: flex;
-  margin-right: 194px;
+  margin-left: 93px;
+  gap: 50px;
 }
 
 .sitenav .link:hover,
@@ -126,21 +130,48 @@ img {
   padding-bottom: 25px;
 }
 
-.sitenav > .item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.header-flex {
-  align-items: center;
-  justify-content: space-between;
-}
 
 .contacts {
   display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 50px;
+  
 }
 
-.contacts > .item {
-  margin-left: 50px;
+.contacts .item {
+  display: flex;
+}
+
+.icon-envelope {
+  margin-right: 10px;
+  fill: #757575;
+}
+
+.icon-smartphone {
+  margin-right: 10px;
+  fill: #757575;
+}
+
+.icon-smartphone:hover,
+.icon-smartphone:focus {
+  fill: var(--main-color);
+}
+
+.icon-envelope:hover,
+.icon-envelope:focus {
+  fill: var(--main-color);
+}
+
+.header-cont {
+  display: flex;
+align-items: center;
+}
+
+.header-cont:hover,
+.header-cont:focus {
+  fill: currentColor;
+  color: var(--main-color);
 }
 
 /* Футер */
@@ -151,7 +182,6 @@ img {
 }
 
 .footer-content {
-  display: flex;
   flex-direction: column;
 }
 
@@ -197,10 +227,15 @@ img {
 
 /* Секція "Hero" */
 .hero {
-  background-color: #2f303a;
+  background-color: #C4C4C4;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/herobg.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  display: block;
 }
 
 .hero .container {
