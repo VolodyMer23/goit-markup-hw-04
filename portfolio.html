@@ -33,12 +33,20 @@
 
         <ul class="contacts list">
           <li class="item">
-            <a href="mailto:info@devstudio.com" class="link"
-              >info@devstudio.com</a
+            <a href="mailto:info@devstudio.com" class="header-cont link">
+              <svg class="icon-envelope" width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
             >
           </li>
           <li class="item">
-            <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+            <a href="tel:+380961111111" class="header-cont link">
+              <svg class="icon-smartphone" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
           </li>
         </ul>
       </div>
@@ -46,7 +54,7 @@
     <main>
       <section class="section filters">
         <div class="container">
-        <h1 hidden>Портфоліо</h1>
+          <h1 hidden>Портфоліо</h1>
           <ul class="filter list">
             <li class="item">
               <button class="portfolio-button btn" type="button">Усі</button>
@@ -71,7 +79,7 @@
             </li>
           </ul>
           <ul class="portfolio list">
-            <li class="item">
+            <li class="portfolio-card-item item">
               <a href="#" class="link">
                 <img
                   src="./images/1-technokriak.jpg"
@@ -85,7 +93,7 @@
               </a>
             </li>
 
-            <li class="item">
+            <li class="portfolio-card-item item">
               <a href="#" class="link">
                 <img
                   src="./images/2-poster.jpg"
@@ -101,7 +109,7 @@
               </a>
             </li>
 
-            <li class="item">
+            <li class="portfolio-card-item item">
               <a href="#" class="link">
                 <img
                   src="./images/3-seafood.jpg"
@@ -115,7 +123,7 @@
               </a>
             </li>
 
-            <li class="item">
+            <li class="portfolio-card-item item">
               <a href="#" class="link">
                 <img
                   src="./images/4-prime.jpg"
@@ -129,7 +137,7 @@
               </a>
             </li>
 
-            <li class="item">
+            <li class="portfolio-card-item item">
               <a href="#" class="link">
                 <img
                   src="./images/5-boxes.jpg"
@@ -143,7 +151,7 @@
               </a>
             </li>
 
-            <li class="item">
+            <li class="portfolio-card-item item">
               <a href="#" class="link">
                 <img
                   src="./images/6-noborders.jpg"
@@ -159,7 +167,7 @@
               </a>
             </li>
 
-            <li class="item">
+            <li class="portfolio-card-item item">
               <a href="#" class="link">
                 <img
                   src="./images/7-limited.jpg"
@@ -175,7 +183,7 @@
               </a>
             </li>
 
-            <li class="item">
+            <li class="portfolio-card-item item">
               <a href="#" class="link">
                 <img
                   src="./images/8-taglab.jpg"
@@ -189,7 +197,7 @@
               </a>
             </li>
 
-            <li class="item">
+            <li class="portfolio-card-item item">
               <a href="#" class="link">
                 <img
                   src="./images/9-grow.jpg"
@@ -208,31 +216,66 @@
     </main>
     <footer class="footer">
       <div class="container footer-content">
-        <a href="./index.html" class="logo link" title="Cтудія"
-          ><span class="logo-web">Web</span
-          ><span class="logo-studio">Studio</span></a
-        >
-        <address class="contact">
-          <ul class="adress list">
-            <li class="item">
-              <a
-                href="https://goo.gl/maps/tANwrw668av1KkJdA"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="link map"
-                >м. Київ, пр-т Лесі Українки, 26</a
-              >
+        <div class="adress-wrapper">
+          <a href="./index.html" class="logo link" title="Cтудія"
+            ><span class="logo-web">Web</span
+            ><span class="logo-studio">Studio</span></a
+          >
+          <address class="contact">
+            <ul class="adress list">
+              <li class="item">
+                <a
+                  href="https://goo.gl/maps/tANwrw668av1KkJdA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link map"
+                  >м. Київ, пр-т Лесі Українки, 26</a
+                >
+              </li>
+              <li class="item">
+                <a href="mailto:info@devstudio.com" class="link"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="item">
+                <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer-soc-wrapper">
+          <h2 class="footer-connect title">приєднуйтесь</h2>
+          <ul class="footer-soc-list list">
+            <li class="team-link-item item">
+              <a href="#" class="link footer-soc-link">
+                <svg class="footer-soc-icon icon" width="44" height="44">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
-            <li class="item">
-              <a href="mailto:info@devstudio.com" class="link"
-                >info@devstudio.com</a
-              >
+            <li class="team-link-item item">
+              <a href="#" class="link footer-soc-link">
+                <svg class="footer-soc-icon icon" width="44" height="44">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
             </li>
-            <li class="item">
-              <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+            <li class="team-link-item item">
+              <a href="#" class="link footer-soc-link">
+                <svg class="footer-soc-icon icon" width="44" height="44">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-link-item item">
+              <a href="#" class="link footer-soc-link">
+                <svg class="footer-soc-icon icon" width="44" height="44">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
     </footer>
   </body>
