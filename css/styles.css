@@ -5,6 +5,8 @@
 /* колір тексту секції "Hero" #FFFFFF */
 /* акцентуючий колір #2196F3 */
 /* колір секції адреси color: rgba(255, 255, 255, 0.6); */
+/* колір іконок: #AFB1B8 */
+
 
 :root {
   --main-color: #2196f3;
@@ -15,6 +17,7 @@
   --main-font-family: "Roboto", sans-serif;
   --item-grid-gap: 30px;
   --header-items-gap: 50px;
+  --svg-main-color: #AFB1B8;
 }
 
 * {
@@ -229,7 +232,7 @@ align-items: center;
 .hero {
   background-color: #C4C4C4;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/herobg.jpg);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
@@ -294,14 +297,26 @@ align-items: center;
 
 .specialty-list {
   display: flex;
-  margin-top: calc(-1 * var(--item-grid-gap));
-  margin-left: calc(-1 * var(--item-grid-gap));
+  gap: 30px;
+  align-items: center;
 }
 
 .specialty-list > .item {
-  flex-basis: calc(100% / 4 - var(--item-grid-gap));
-  margin-top: var(--item-grid-gap);
-  margin-left: var(--item-grid-gap);
+  /* flex-basis: calc(100% / 4 - var(--item-grid-gap)); */
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  
+.icon {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+
+  
 }
 
 /* Секція послуги */
@@ -372,8 +387,33 @@ align-items: center;
   flex-basis: calc(100% / 3 - var(--item-grid-gap));
   margin-top: var(--item-grid-gap);
   margin-left: var(--item-grid-gap);
+  border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Постійні клієнти */
+
+
+
+.clients .container {
+  flex-direction: column;
+}
+
+.clients-list {
+  display: flex;
+  gap: 30px;
+}
+
+.clients-list .item {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--svg-main-color);
+}
+
+.client-link:hover,
+.client-link:focus {
+
 }
 
 /* Футер сторінки */
