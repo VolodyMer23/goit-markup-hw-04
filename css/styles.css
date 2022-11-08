@@ -301,9 +301,6 @@ align-items: center;
   align-items: center;
 }
 
-.specialty-list > .item {
-  /* flex-basis: calc(100% / 4 - var(--item-grid-gap)); */
-}
 
 .icon-wrapper {
   display: flex;
@@ -413,8 +410,9 @@ align-items: center;
 
 .client-link:hover,
 .client-link:focus {
-
+  fill: var(--main-color);
 }
+
 
 /* Футер сторінки */
 .contact {
