@@ -43,6 +43,20 @@ img {
   max-width: 100%;
 }
 
+.hide {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -140,27 +154,23 @@ img {
 }
 
 .contacts .item {
-  display: flex;
+  display: block;
+}
+
+.contacts .item:hover,
+.contacts .item:focus {
+  fill: var(--main-color);
+  color: var(--main-color);
 }
 
 .icon-envelope {
   margin-right: 10px;
-  fill: #757575;
+  fill: currentColor;
 }
 
 .icon-smartphone {
   margin-right: 10px;
-  fill: #757575;
-}
-
-.icon-smartphone:hover,
-.icon-smartphone:focus {
-  fill: var(--main-color);
-}
-
-.icon-envelope:hover,
-.icon-envelope:focus {
-  fill: var(--main-color);
+  fill: currentColor;
 }
 
 .header-cont {
@@ -170,7 +180,6 @@ img {
 
 .header-cont:hover,
 .header-cont:focus {
-  fill: currentColor;
   color: var(--main-color);
 }
 
@@ -283,6 +292,10 @@ img {
 }
 
 /* Секція особливості */
+.specialty-wrap {
+  justify-content: baseline;
+}
+
 .specialty-post {
   font-size: 14px;
   line-height: 1.14;
@@ -300,20 +313,24 @@ img {
 .specialty-list {
   display: flex;
   gap: 30px;
-  align-items: center;
+  align-items: baseline;
 }
-
+.specialty-item {
+  display: block;
+}
 .icon-wrapper {
   display: flex;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #F5F4FA;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .specialty-icon {
-  margin-top: 50px;
-  margin-bottom: 50px;
   background-repeat: no-repeat;
-  display: flex;
 }
 
 /* Секція послуги */
@@ -371,6 +388,14 @@ img {
   display: flex;
 }
 
+.team-link-item {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .team-card {
   background-color: #ffffff;
   padding-top: 30px;
@@ -387,10 +412,7 @@ img {
 .team-card-soc-list {
   display: flex;
   gap: 10px;
-  padding: 0;
-  margin: 0;
   justify-content: center;
-  align-items: center;
 }
 
 .team-card-soc {
@@ -399,18 +421,18 @@ img {
 }
 
 .soc-icon {
-  display: block;
-  padding: 12px;
+  display: flex;
   fill: var(--svg-main-color);
 }
 
 .soc-link {
-  display: block;
-  width: 44px;
-  height: 44px;
-  /* padding: 12px; */
+  display: flex;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
 }
 
 .soc-link:hover,
@@ -419,8 +441,8 @@ img {
   background-color: var(--main-color);
 }
 
-.soc-icon:hover,
-.soc-icon:focus {
+.soc-link:hover .soc-icon,
+.soc-link:focus .soc-icon {
   fill: #ffffff;
 }
 
@@ -445,34 +467,38 @@ img {
   border-radius: 5px;
 }
 
-.clients-list-item:hover,
-.clients-list-item:focus {
+.client-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-link:hover,
+.client-link:focus {
   border: 1px solid var(--main-color);
 }
 
-.client-link {
-  display: block;
-  text-align: center;
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  fill: var(--main-color);
 }
 
 .client-icon {
   display: block;
-  width: 170px;
-  height: 92px;
-  padding: 16px 32px;
   fill: var(--svg-main-color);
 }
 
-.client-icon:hover,
-.client-icon:focus {
-  fill: var(--main-color);
-}
+
+
 
 /* Футер сторінки */
 .footer-content {
   display: flex;
   flex-direction: row;
   gap: 94px;
+  align-items: baseline;
 }
 
 .adress-wrapper > .logo {
@@ -502,7 +528,6 @@ img {
   display: flex;
   text-align: start;
   flex-direction: column;
-  margin-top: 12px;
 }
 
 .footer-connect {
@@ -523,19 +548,22 @@ img {
   align-items: center;
 }
 
-.footer-soc-link {
-  display: block;
+.footer-soc-item {
   width: 44px;
   height: 44px;
-  /* padding: 12px; */
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.footer-soc-icon {
-  display: block;
-  padding: 12px;
-  fill: #ffffff;
+.footer-soc-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-soc-link:hover,
@@ -543,10 +571,12 @@ img {
   background-color: var(--main-color);
 }
 
-.footer-soc-icon:hover,
-.footer-soc-icon:focus {
+.footer-soc-icon {
+  display: block;
   fill: #ffffff;
 }
+
+
 
 /* Сторінка портфоліо 
     Фільтри */
@@ -596,18 +626,17 @@ img {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-1 * var(--item-grid-gap));
-  margin-left: calc(-1 * var(--item-grid-gap));
+  gap: 30px;
+  /* margin-top: calc(-1 * var(--item-grid-gap));
+  margin-left: calc(-1 * var(--item-grid-gap)); */
 }
 
-.portfolio > .item {
-  flex-basis: calc(100% / 3 - var(--item-grid-gap));
-  margin-top: var(--item-grid-gap);
-  margin-left: var(--item-grid-gap);
+.portfolio-link {
+  display: block;
 }
 
-.portfolio-card-item:hover,
-.portfolio-card-item:focus {
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
