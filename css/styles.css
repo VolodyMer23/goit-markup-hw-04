@@ -100,6 +100,9 @@ img {
 /* Шапка сайту */
 .header {
   border-bottom: 1px solid #ececec;
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Логотип */
@@ -236,6 +239,7 @@ img {
 
 /* Секція "Hero" */
 .hero {
+  width: 1600px;
   background-color: #c4c4c4;
   background-image: linear-gradient(
       to right,
@@ -247,6 +251,8 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
   display: block;
@@ -323,7 +329,7 @@ img {
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
-  background-color: #F5F4FA;
+  background-color: #f5f4fa;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -490,9 +496,6 @@ img {
   fill: var(--svg-main-color);
 }
 
-
-
-
 /* Футер сторінки */
 .footer-content {
   display: flex;
@@ -531,8 +534,11 @@ img {
 }
 
 .footer-connect {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
@@ -575,8 +581,6 @@ img {
   display: block;
   fill: #ffffff;
 }
-
-
 
 /* Сторінка портфоліо 
     Фільтри */
